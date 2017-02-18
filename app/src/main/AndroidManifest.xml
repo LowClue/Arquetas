@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="es.alarcon.arquetanatureble" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" >
+    </uses-feature>
+
+    <application
+        android:name=".CORE.BLE_Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <service android:name=".CORE.ServiceDetectionTag"
+                 android:process=":Nature_ScannerBLE"/>
+
+        <activity
+            android:name=".GUI.ScanActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".GUI.DeviceActivity"
+            android:label="@string/title_activity_sensor"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".GUI.ResumenActivity"
+            android:label="@string/title_activity_resumen"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".GUI.OutsideChamberActivity"
+            android:label="@string/title_activity_outside_chamber"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".GUI.InsideChamberActivity"
+            android:label="@string/title_activity_inside_chamber"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <receiver
+            android:name=".BLE.BLEBroadcastReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="es.alarcon.arquetanatureble.DEVICE_FOUND" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".CORE.ServiceDetectionTag$ServiceBroadcastReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="es.alarcon.arquetanatureble.NOTIFY_NEW_DEVICE" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>

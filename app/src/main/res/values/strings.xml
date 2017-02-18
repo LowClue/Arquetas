@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">IoT_BLE</string>
+
+    <string name="scan">Scanear</string>
+    <string name="sendInfo2Cloud">Enviar informes al servidor</string>
+    <string name="stopScan">Stop scaneo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_sensor">SensorActivity</string>
+    <string name="title_activity_resumen">ResumenActivity</string>
+    <string name="title_activity_parameters_device">ParametersDeviceActivity</string>
+    <string name="title_activity_outside_chamber">OutsideChamberActivity</string>
+    <string name="title_activity_inside_chamber">InsideChamberActivity</string>
+</resources>

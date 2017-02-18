@@ -1,0 +1,468 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="es.alarcon.arquetanatureble.GUI.InsideChamberActivity">
+
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="1">
+        <TextView
+            android:id="@+id/LB_ElementosInternos"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="80dp"
+            android:text="Elementos Internos"
+            android:textStyle="italic"
+            android:textSize="12dp"/>
+
+        <TableLayout
+            android:orientation="vertical"
+            android:background="#000000"
+            android:stretchColumns="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/filaEI0"
+                android:background="#ffffff"
+                android:layout_margin="1dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/LB_Codigo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Código"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/LB_Designacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Designación"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/LB_EstadoBuenoEI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="0dp"
+                        android:text="Bueno"
+                        android:textStyle="italic"
+                        android:textSize="12dp"/>
+
+                    <TextView
+                        android:id="@+id/LB_EstadoAceptableEI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="0dp"
+                        android:text="Aceptable"
+                        android:textStyle="italic"
+                        android:textSize="12dp"/>
+
+                    <TextView
+                        android:id="@+id/LB_EstadoNecesitaReparacionEI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="0dp"
+                        android:text="Necesita Reparación"
+                        android:textStyle="italic"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:id="@+id/filaEI1"
+                android:background="#ffffff"
+                android:layout_margin="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/LB_Codigo1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="X-Y-EI-1"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/LB_Designacion1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Ventosas"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <RadioGroup
+                    android:id="@+id/GrbGrupoEI1"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="fill_parent">
+
+                    <RadioButton
+                        android:id="@+id/RbOption1GrbEI1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:text = ""/>
+                    <RadioButton
+                        android:id="@+id/RbOption2GrbEI1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text = ""/>
+                    <RadioButton
+                        android:id="@+id/RbOption3GrbEI1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text = ""/>
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/filaEI2"
+                android:layout_width="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#ffffff"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/LB_Codigo2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="X-Y-EI-2"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/LB_Designacion2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Válvulas"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <RadioGroup
+                    android:id="@+id/GrbGrupoEI2"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="fill_parent">
+
+                    <RadioButton
+                        android:id="@+id/RbOption1GrbEI2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:text = ""/>
+                    <RadioButton
+                        android:id="@+id/RbOption2GrbEI2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text = ""/>
+                    <RadioButton
+                        android:id="@+id/RbOption3GrbEI2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text = ""/>
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/filaEI3"
+                android:layout_width="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#ffffff"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/LB_Codigo3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="X-Y-EI-3"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/LB_Designacion3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Juntas de unión de carretes	"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <RadioGroup
+                    android:id="@+id/GrbGrupoEI3"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="fill_parent">
+
+                    <RadioButton
+                        android:id="@+id/RbOption1GrbEI3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:text = ""/>
+                    <RadioButton
+                        android:id="@+id/RbOption2GrbEI3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text = ""/>
+                    <RadioButton
+                        android:id="@+id/RbOption3GrbEI3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text = ""/>
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/filaEI4"
+                android:layout_width="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#ffffff"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/LB_Codigo4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="X-Y-EI-4"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/LB_Designacion4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Manómetros"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <RadioGroup
+                    android:id="@+id/GrbGrupoEI4"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="fill_parent">
+
+                    <RadioButton
+                        android:id="@+id/RbOption1GrbEI4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:text = ""/>
+                    <RadioButton
+                        android:id="@+id/RbOption2GrbEI4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text = ""/>
+                    <RadioButton
+                        android:id="@+id/RbOption3GrbEI4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text = ""/>
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/filaEI5"
+                android:layout_width="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#ffffff"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/LB_Codigo5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="X-Y-EI-5"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/LB_Designacion5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Contadores"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <RadioGroup
+                    android:id="@+id/GrbGrupoEI5"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="fill_parent">
+
+                    <RadioButton
+                        android:id="@+id/RbOption1GrbEI5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:text = ""/>
+                    <RadioButton
+                        android:id="@+id/RbOption2GrbEI5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text = ""/>
+                    <RadioButton
+                        android:id="@+id/RbOption3GrbEI5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text = ""/>
+                </RadioGroup>
+            </TableRow>
+        </TableLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/LB_comentarioEstadoInterior"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Comentario destacable del estado interior :"
+            android:textStyle="italic"
+            android:textSize="12dp"/>
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/tB_comentario"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+    <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/IV_arqInterior"
+            android:src="@drawable/arqueton_interior"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginLeft="300dp" />
+
+    <!--- Separador  Datos de internet-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/material_blue_grey_800"
+        android:orientation="horizontal"
+        />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/LB_comentario"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:text="Toma una foto del estado de la arqueta"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <ImageView
+                android:layout_width="78dp"
+                android:layout_height="117dp"
+                android:id="@+id/IV_camera"
+                android:src="@drawable/camara"
+                android:layout_marginLeft="80dp"
+                android:layout_alignTop="@+id/bt_camera"
+                android:layout_weight="0.24" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto"
+                android:id="@+id/bt_camera"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/ovalo"
+                android:textColor="#FFFFFF"
+                android:textSize="35sp"
+                android:shadowColor="#ff000000"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="2"
+                android:layout_marginBottom="10dp" />
+        </LinearLayout>
+    <!--- Separador  Datos de internet-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/material_blue_grey_800"
+        android:orientation="horizontal"
+        />
+    <Button
+        android:id="@+id/bt_siguienteDevice"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Siguiente"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/ovalo"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:shadowColor="#ff000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="2"/>
+
+</LinearLayout>
+</RelativeLayout>

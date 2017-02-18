@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="D:\Universidad\Finalizando\Proyecto\ArquetaNatureBLE\volley\volley.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
+        <dex dex="D:\Universidad\Finalizando\Proyecto\ArquetaNatureBLE\app\build\intermediates\pre-dexed\debug\volley_62743a78fe9a3176bf675376625ee9a93748ece2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\air_p\Desktop\ProyectoNuevo\ArquetasPepe\volley\volley.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
+        <dex dex="C:\Users\air_p\Desktop\ProyectoNuevo\ArquetasPepe\app\build\intermediates\pre-dexed\debug\volley_1e10788b56b23021aa942e39ff3d2959cab6647f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Universidad\Finalizando\Proyecto\ArquetaNatureBLE\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="D:\Universidad\Finalizando\Proyecto\ArquetaNatureBLE\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-22.2.1_ed0fc9cbc3726f7356600657544ca21f76a1f219.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\air_p\Desktop\ProyectoNuevo\ArquetasPepe\mysql-connector-java-5.1.36-bin\mysql-connector-java-5.1.36-bin.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="df340b878861acd94a853dbab3e40a1b203cef21">
+        <dex dex="C:\Users\air_p\Desktop\ProyectoNuevo\ArquetasPepe\app\build\intermediates\pre-dexed\debug\mysql-connector-java-5.1.36-bin_2a3b9460f87f51eabc4d1cebb7b86db7a9d5a092.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\air_p\Desktop\ProyectoNuevo\ArquetasPepe\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\air_p\Desktop\ProyectoNuevo\ArquetasPepe\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1_30422f0380cffda699787538f792289378fe3092.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\air_p\Desktop\ProyectoNuevo\ArquetasPepe\gson-2.4\gson-2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="C:\Users\air_p\Desktop\ProyectoNuevo\ArquetasPepe\app\build\intermediates\pre-dexed\debug\gson-2.4_cc9f21f57ee541c85912fd364c7fbe9cb2c5eb52.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\air_p\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="D:\Universidad\Finalizando\Proyecto\ArquetaNatureBLE\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1_a1f1d146e28eb49051e8085e935ad3f64107337a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Universidad\Finalizando\Proyecto\ArquetaNatureBLE\mysql-connector-java-5.1.36-bin\mysql-connector-java-5.1.36-bin.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="df340b878861acd94a853dbab3e40a1b203cef21">
+        <dex dex="D:\Universidad\Finalizando\Proyecto\ArquetaNatureBLE\app\build\intermediates\pre-dexed\debug\mysql-connector-java-5.1.36-bin_dae20b455f36d15bb4f04c38aa3b24ba9ccfda13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\air_p\Desktop\ProyectoNuevo\ArquetasPepe\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\air_p\Desktop\ProyectoNuevo\ArquetasPepe\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-22.2.1_0cdd2ca1aa65351368a935631501f153c06a26e6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\air_p\Desktop\ProyectoNuevo\ArquetasPepe\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\air_p\Desktop\ProyectoNuevo\ArquetasPepe\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-22.2.1_18078f7de2b37de0dd3780a9042c2bbfc2b068eb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Universidad\Finalizando\Proyecto\ArquetaNatureBLE\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="D:\Universidad\Finalizando\Proyecto\ArquetaNatureBLE\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1_e79162c7bf3313f20ce2d4742eeef84aebd77ad8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Universidad\Finalizando\Proyecto\ArquetaNatureBLE\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="D:\Universidad\Finalizando\Proyecto\ArquetaNatureBLE\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-22.2.1_3002c68c8145663eeb55ff3d2723b74c0ec4eaa6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Universidad\Finalizando\Proyecto\ArquetaNatureBLE\gson-2.4\gson-2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="D:\Universidad\Finalizando\Proyecto\ArquetaNatureBLE\app\build\intermediates\pre-dexed\debug\gson-2.4_a0e125733e73ed68649a1e3b38d00f2562b0695e.jar" />
+    </item>
+
+</items>

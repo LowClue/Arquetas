@@ -1,0 +1,1 @@
+include ':app', ':mysql-connector-java-5.1.36-bin', ':volley', ':gson-2.4'

@@ -1,0 +1,338 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="pfc.teleco.upct.es.iot_ble.GUI.DeviceActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+    <!--- Separador  Datos del mote-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--- Separador  Datos del mote-->
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/chamberPicture"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/chamber_device"
+            android:layout_alignParentRight="false"
+            android:layout_marginLeft="0dp"/>
+
+        <TextView
+            android:id="@+id/deviceNameSensor"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="25dp"
+            android:text="Arqueta"
+            android:textStyle="bold"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="25dp"
+            android:text="Nombre :"
+            android:textStyle="bold"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/StateChamber"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="45dp"
+            android:text="Señalizando"
+            android:textStyle="bold"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/ValueState"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="45dp"
+            android:text="Estado   :"
+            android:textStyle="bold"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/rssiText"
+            android:layout_width ="120dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="260dp"
+            android:layout_marginTop="25dp"
+            android:text="RSSI :"
+            android:textStyle="bold"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/rssiLevelSensor"
+            android:layout_width ="120dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="310dp"
+            android:layout_marginTop="25dp"
+            android:text="RSSI"
+            android:textStyle="bold"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/Lb_infoSection"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="0dp"
+            android:text="información del dispositivo arqueta"
+            android:textStyle="italic"
+            android:textSize="12dp"/>
+
+        <Button
+            android:id="@+id/bt_connectServer"
+            android:layout_height="90dp"
+            android:layout_width="90dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:text="connectar"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/circle"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:shadowColor="#ff000000"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="2"/>
+    </RelativeLayout>
+
+    <!--- Separador  Datos de internet-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/material_blue_grey_800"
+        android:orientation="horizontal"
+        />
+
+        <TableLayout
+            android:orientation="vertical"
+            android:layout_marginTop="0dp"
+            android:stretchColumns="3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/filaInfoE0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/LB_Zona"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Zona : "
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/LB_Fecha_Control"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Fecha de Control :"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/filaInfoE1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/LB_LocalizacionArqueta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Localización Arqueta"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/LB_Ramal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="RAMAL"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/LB_HM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="HM"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/LB_TM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="TM"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/filaInfoE2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/LB_ResponsableControl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Responsable Control"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/LB_RPInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="XXXXXXXX"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/filaInfoE3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/LB_ResponsableZona"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Resposble de Zona "
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/LB_RZ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="YYYYYYYY"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+            </TableRow>
+        </TableLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/material_blue_grey_800"
+                android:orientation="horizontal" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/linearLayout2"/>
+
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:id="@+id/IV_arqInterior"
+                    android:src="@drawable/interior_arqueta"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_marginLeft="240dp" />
+
+                <TextView
+                    android:id="@+id/tV_sensor1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="valor"
+                    android:layout_marginLeft="390dp"
+                    android:layout_marginTop="51dp"
+                    android:layout_alignParentStart="true"/>
+
+                <TextView
+                    android:id="@+id/tV_sensor2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="valor"
+                    android:layout_marginLeft="343dp"
+                    android:layout_marginTop="97dp"
+                    android:layout_alignParentStart="true"/>
+
+                <TextView
+                    android:id="@+id/tV_sensor3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="valor"
+                    android:layout_marginLeft="443dp"
+                    android:layout_marginTop="51dp"
+                    android:layout_alignParentStart="true"/>
+            </RelativeLayout>
+            <Button
+                android:id="@+id/bt_enviarInforme"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Enviar informe"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/ovalo"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:shadowColor="#ff000000"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="2"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
+

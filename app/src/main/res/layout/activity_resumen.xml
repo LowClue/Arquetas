@@ -1,0 +1,981 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="pfc.teleco.upct.es.iot_ble.GUI.ResumenActivity">
+
+<!--- Separador  Datos del mote-->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/chamberPicture"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/chamber_device"
+        android:layout_alignParentRight="false"
+        android:layout_marginLeft="0dp"/>
+
+    <TextView
+        android:id="@+id/deviceNameSensor"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="25dp"
+        android:text="Arqueta"
+        android:textStyle="bold"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="25dp"
+        android:text="Nombre :"
+        android:textStyle="bold"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/StateChamber"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="45dp"
+        android:text="Señalizando"
+        android:textStyle="bold"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/ValueState"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="45dp"
+        android:text="Estado   :"
+        android:textStyle="bold"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/rssiText"
+        android:layout_width ="120dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="25dp"
+        android:text="RSSI :"
+        android:textStyle="bold"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/rssiLevelSensor"
+        android:layout_width ="120dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="25dp"
+        android:text="RSSI"
+        android:textStyle="bold"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/Lb_infoSection"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="0dp"
+        android:text="información del dispositivo arqueta"
+        android:textStyle="italic"
+        android:textSize="12dp"/>
+</RelativeLayout>
+
+<!--- Separador  Datos de internet-->
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:background="@color/material_blue_grey_800"
+    android:orientation="horizontal"
+    />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_marginTop="0dp"
+        android:stretchColumns="3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:id="@+id/filaInfoE0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/LB_Zona"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Zona : "
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/LB_Fecha_Control"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Fecha de Control :"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/filaInfoE1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/LB_LocalizacionArqueta"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Localización Arqueta"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/LB_Ramal"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="RAMAL"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/LB_HM"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="HM"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/LB_TM"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="TM"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/filaInfoE2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/LB_ResponsableControl"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Responsable Control"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/LB_RPInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="XXXXXXXX"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/filaInfoE3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/LB_ResponsableZona"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Resposble de Zona "
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/LB_RZ"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="YYYYYYYY"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+        </TableRow>
+    </TableLayout>
+
+
+</RelativeLayout>
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!--- Separador Seccion Usuario -->
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:background="@color/material_blue_grey_800"
+    android:orientation="horizontal"
+    />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+    <TextView
+        android:id="@+id/LB_infoEstadoConsevacin"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="0dp"
+        android:text="Estado Consevación"
+        android:textStyle="italic"
+        android:textSize="12dp"/>
+
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:stretchColumns="1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TableRow
+            android:id="@+id/fila0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/LB_AControlar"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="A Controlar"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <!--- Separador Seccion Usuario -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/LB_EstadoBueno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Bueno"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+                <TextView
+                    android:id="@+id/LB_EstadoAceptable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Aceptable"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/LB_EstadoNecesitaReparacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Necesita Reparación"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+            </LinearLayout>
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/fila1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/LB_AccesoUbicacion"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Acceso Ubicacion"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <RadioGroup
+                android:id="@+id/GrbGrupo1"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_height="fill_parent">
+
+                <RadioButton
+                    android:id="@+id/RbOption1Grb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text = ""
+                    android:checked="false"
+                    android:clickable="false"
+                    android:enabled="true" />
+                <RadioButton
+                    android:id="@+id/RbOption2Grb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption3Grb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text = ""/>
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/fila2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/LB_PerimetroArqueta"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Perimetro Arqueta"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <RadioGroup
+                android:id="@+id/GrbGrupo2"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_height="fill_parent">
+
+                <RadioButton
+                    android:id="@+id/RbOption1Grb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption2Grb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption3Grb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text = ""/>
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/fila3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/LB_PuertaAcceso"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Puerta Acceso"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <RadioGroup
+                android:id="@+id/GrbGrupo3"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_height="fill_parent"
+                android:baselineAligned="false"
+                android:clickable="false">
+
+                <RadioButton
+                    android:id="@+id/RbOption1Grb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption2Grb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption3Grb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text = ""/>
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/fila4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/LB_Cubierta"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Cubierta"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <RadioGroup
+                android:id="@+id/GrbGrupo4"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_height="fill_parent">
+
+                <RadioButton
+                    android:id="@+id/RbOption1Grb4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption2Grb4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption3Grb4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text = ""/>
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/fila5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/LB_ParametrosVerInt"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Parametros Verticales Int."
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <RadioGroup
+                android:id="@+id/GrbGrupo5"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_height="fill_parent">
+
+                <RadioButton
+                    android:id="@+id/RbOption1Grb5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption2Grb5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption3Grb5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text = ""/>
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/fila6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/LB_ParametrosVerExt"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Parametros Verticales Ext."
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <RadioGroup
+                android:id="@+id/GrbGrupo6"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_height="fill_parent">
+
+                <RadioButton
+                    android:id="@+id/RbOption1Grb6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption2Grb6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption3Grb6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text = ""/>
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/fila7"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/LB_VentilacionLat"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Ventilación Lateral"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <RadioGroup
+                android:id="@+id/GrbGrupo7"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_height="fill_parent">
+
+                <RadioButton
+                    android:id="@+id/RbOption1Grb7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption2Grb7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption3Grb7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text = ""/>
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/fila8"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/LB_VentilacionSuperior"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Ventilacion Superior"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <RadioGroup
+                android:id="@+id/GrbGrupo8"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_height="fill_parent">
+
+                <RadioButton
+                    android:id="@+id/RbOption1Grb8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption2Grb8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption3Grb8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text = ""/>
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/fila9"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/LB_Escalera"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Pates/Escalera"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <RadioGroup
+                android:id="@+id/GrbGrupo9"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_height="fill_parent">
+
+                <RadioButton
+                    android:id="@+id/RbOption1Grb9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption2Grb9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption3Grb9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text = ""/>
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/fila10"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/LB_DistanciaReglaElementos"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Distancia Reglamentaria Elementos"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <RadioGroup
+                android:id="@+id/GrbGrupo10"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_height="fill_parent">
+
+                <RadioButton
+                    android:id="@+id/RbOption1Grb10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption2Grb10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption3Grb10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text = ""/>
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/fila11"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/LB_ExisteCondensacion"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Existe Condensación"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <RadioGroup
+                android:id="@+id/GrbGrupo11"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_height="fill_parent">
+
+                <RadioButton
+                    android:id="@+id/RbOption1Grb11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption2Grb11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption3Grb11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text = ""/>
+            </RadioGroup>
+        </TableRow>
+    </TableLayout>
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+    <!--- Separador  Datos de internet-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="290dp"
+        android:background="@color/material_blue_grey_800"
+        android:orientation="horizontal"
+        />
+
+    <TextView
+        android:id="@+id/LB_ElementosInternos"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="290dp"
+        android:text="Elementos Internos"
+        android:textStyle="italic"
+        android:textSize="12dp"/>
+
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_marginTop="305dp"
+        android:stretchColumns="2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TableRow
+            android:id="@+id/filaEI0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/LB_Codigo"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Código"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/LB_Designacion"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Designación"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/LB_EstadoBuenoEI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Bueno"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/LB_EstadoAceptableEI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Aceptable"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/LB_EstadoNecesitaReparacionEI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Necesita Reparación"
+                    android:textStyle="italic"
+                    android:textSize="12dp"/>
+            </LinearLayout>
+        </TableRow>
+        <TableRow
+            android:id="@+id/filaEI1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/LB_Codigo1"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="1111111"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/LB_Designacion1"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="proteccion placa"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <RadioGroup
+                android:id="@+id/GrbGrupoEI1"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_height="fill_parent">
+
+                <RadioButton
+                    android:id="@+id/RbOption1GrbEI1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption2GrbEI1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption3GrbEI1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text = ""/>
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/filaEI2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/LB_Codigo2"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="2222222"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/LB_Designacion2"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="conexiones"
+                android:textStyle="italic"
+                android:textSize="12dp"/>
+
+            <RadioGroup
+                android:id="@+id/GrbGrupoEI2"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_height="fill_parent">
+
+                <RadioButton
+                    android:id="@+id/RbOption1GrbEI2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption2GrbEI2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text = ""/>
+                <RadioButton
+                    android:id="@+id/RbOption3GrbEI2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text = ""/>
+            </RadioGroup>
+        </TableRow>
+    </TableLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/IV_camera"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginLeft="490dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="3dp" />
+
+</RelativeLayout>
+</LinearLayout>
