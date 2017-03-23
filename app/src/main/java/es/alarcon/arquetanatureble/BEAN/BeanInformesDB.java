@@ -1,232 +1,237 @@
 package es.alarcon.arquetanatureble.BEAN;
 
+
+
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.provider.Settings;
 
 /**
  * Created by alarcon on 22/9/15.
  */
 public class BeanInformesDB implements Parcelable
-    {
-        public static final int BUENO               = 1;
-        public static final int ACEPTABLE           = 2;
-        public static final int NECESITA_REPARACION = 3;
+{
+    public static final int BUENO               = 1;
+    public static final int ACEPTABLE           = 2;
+    public static final int NECESITA_REPARACION = 3;
 
-        private static int idDataBase;
-        private static String fecha;
-        //parametros exterios
-        private static String direccion_arqueta;
-        private static int accesoUbicacion;
-        private static int perimetroArqueta;
-        private static int puertaAcceso;
-        private static int cubierta;
-        private static int parVertInt;
-        private static int parVertExt;
-        private static int ventilacionLateral;
-        private static int ventilacionSuperior;
-        private static int patesEscalera;
-        private static int distanciaRegElementos;
+    private  int idDataBase;
+    private  String fecha;
+    //parametros exterios
+    private  String direccion_arqueta;
+    private  int accesoUbicacion;
+    private  int perimetroArqueta;
+    private  int puertaAcceso;
+    private  int cubierta;
+    private  int parVertInt;
+    private  int parVertExt;
+    private  int ventilacionLateral;
+    private  int ventilacionSuperior;
+    private  int patesEscalera;
+    private  int distanciaRegElementos;
 
-        //parametros interior
-        private static int ventosas;
-        private static int valvulas;
-        private static int juntasUnion;
-        private static int manometros;
-        private static int contadores;
+    //parametros interior
+    private  int ventosas;
+    private  int valvulas;
+    private  int juntasUnion;
+    private  int manometros;
+    private  int contadores;
 
-        private static String comentario;
+    private String comentario;
 
-        public static byte[] foto;
+    public  byte[] foto;
 
-        public BeanInformesDB(Parcel source)
-        {
-            super();
-            this.idDataBase             = source.readInt();
-            this.accesoUbicacion        = source.readInt();
-            this.perimetroArqueta       = source.readInt();
-            this.puertaAcceso           = source.readInt();
-            this.cubierta               = source.readInt();
-            this.parVertInt             = source.readInt();
-            this.parVertExt             = source.readInt();
-            this.ventilacionLateral     = source.readInt();
-            this.ventilacionSuperior    = source.readInt();
-            this.patesEscalera          = source.readInt();
-            this.distanciaRegElementos  = source.readInt();
-            this.fecha                  = source.readString();
-            this.direccion_arqueta      = source.readString();
-
-            this.ventosas               = source.readInt();
-            this.valvulas               = source.readInt();
-            this.juntasUnion            = source.readInt();
-            this.manometros             = source.readInt();
-            this.contadores             = source.readInt();
-            this.comentario             = source.readString();
-            source.readByteArray( this.foto );
-    }
     public BeanInformesDB(){super();}
-
-    public static void setIDDataBase(int id)
+    public BeanInformesDB(Parcel inParcel)
     {
-        BeanInformesDB.idDataBase = id;
+        super();
+        idDataBase = inParcel.readInt();
+        fecha      = inParcel.readString();
+        direccion_arqueta = inParcel.readString();
+        accesoUbicacion   = inParcel.readInt();
+        perimetroArqueta  = inParcel.readInt();
+        puertaAcceso= inParcel.readInt();
+        cubierta= inParcel.readInt();
+        parVertInt= inParcel.readInt();
+        parVertExt= inParcel.readInt();
+        ventilacionLateral= inParcel.readInt();
+        ventilacionSuperior= inParcel.readInt();
+        patesEscalera= inParcel.readInt();
+        distanciaRegElementos= inParcel.readInt();
+        ventosas= inParcel.readInt();
+        valvulas= inParcel.readInt();
+        juntasUnion= inParcel.readInt();
+        manometros= inParcel.readInt();
+        contadores= inParcel.readInt();
+
+        foto = inParcel.createByteArray();
+
+        comentario=inParcel.readString();
     }
 
-    public static int getIDDataBase()
+    ///Setter and Getter methods
+
+    public  void setIDDataBase(int id)
+    {
+        this.idDataBase = id;
+    }
+
+    public  int getIDDataBase()
     {
         return idDataBase;
     }
-    public static String getComentario() {
+    public  String getComentario() {
         return comentario;
     }
 
-    public static void setComentario(String comentario) {
-        BeanInformesDB.comentario = comentario;
+    public  void setComentario(String comentario) {
+        this.comentario = comentario;
     }
 
-    public static byte[] getFoto() {
+    public  byte[] getFoto() {
         return foto;
     }
 
-    public static void setFoto(byte[] foto) {
-        BeanInformesDB.foto = foto;
+    public  void setFoto(byte[] foto) {
+        this.foto= foto;
     }
 
-    public static String getFecha() {
+    public  String getFecha() {
         return fecha;
     }
 
-    public static void setFecha(String fecha) {
-        BeanInformesDB.fecha = fecha;
+    public  void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
-    public static String getDireccion_arqueta() {
+    public  String getDireccion_arqueta() {
         return direccion_arqueta;
     }
 
-    public static void setDireccion_arqueta(String direccion_arqueta) {
-        BeanInformesDB.direccion_arqueta = direccion_arqueta;
+    public  void setDireccion_arqueta(String direccion_arqueta) {
+        this.direccion_arqueta = direccion_arqueta;
     }
 
-    public static int getAccesoUbicacion() {
+    public  int getAccesoUbicacion() {
         return accesoUbicacion;
     }
 
-    public static void setAccesoUbicacion(int ext_1) {
-        BeanInformesDB.accesoUbicacion = ext_1;
+    public  void setAccesoUbicacion(int ext_1) {
+        this.accesoUbicacion = ext_1;
     }
 
-    public static int getPerimetroArqueta() {
+    public  int getPerimetroArqueta() {
         return perimetroArqueta;
     }
 
-    public static void setPerimetroArqueta(int perimetroArqueta) {
-        BeanInformesDB.perimetroArqueta = perimetroArqueta;
+    public  void setPerimetroArqueta(int perimetroArqueta) {
+        this.perimetroArqueta = perimetroArqueta;
     }
 
-    public static int getPuertaAcceso() {
+    public  int getPuertaAcceso() {
         return puertaAcceso;
     }
 
-    public static void setPuertaAcceso(int puertaAcceso) {
-        BeanInformesDB.puertaAcceso = puertaAcceso;
+    public  void setPuertaAcceso(int puertaAcceso) {
+        this.puertaAcceso = puertaAcceso;
     }
 
-    public static int getCubierta() {
+    public  int getCubierta() {
         return cubierta;
     }
 
-    public static void setCubierta(int cubierta) {
-        BeanInformesDB.cubierta = cubierta;
+    public  void setCubierta(int cubierta) {
+        this.cubierta = cubierta;
     }
 
-    public static int getParVertInt() {
+    public  int getParVertInt() {
         return parVertInt;
     }
 
-    public static void setParVertInt(int parVertInt) {
-        BeanInformesDB.parVertInt = parVertInt;
+    public  void setParVertInt(int parVertInt) {
+        this.parVertInt = parVertInt;
     }
 
-    public static int getParVertExt() {
+    public  int getParVertExt() {
         return parVertExt;
     }
 
-    public static void setParVertExt(int parVertExt) {
-        BeanInformesDB.parVertExt = parVertExt;
+    public  void setParVertExt(int parVertExt) {
+        this.parVertExt = parVertExt;
     }
 
-    public static int getVentilacionLateral() {
+    public  int getVentilacionLateral() {
         return ventilacionLateral;
     }
 
-    public static void setVentilacionLateral(int ventilacionLateral) {
-        BeanInformesDB.ventilacionLateral = ventilacionLateral;
+    public  void setVentilacionLateral(int ventilacionLateral) {
+        this.ventilacionLateral = ventilacionLateral;
     }
 
-    public static int getVentilacionSuperior() {
-        return ventilacionSuperior;
+    public  int getVentilacionSuperior() {
+        return this.ventilacionSuperior;
     }
 
-    public static void setVentilacionSuperior(int ventilacionSuperior) {
-        BeanInformesDB.ventilacionSuperior = ventilacionSuperior;
+    public void setVentilacionSuperior(int ventilacionSuperior) {
+        this.ventilacionSuperior = ventilacionSuperior;
     }
 
-    public static int getPatesEscalera() {
-        return patesEscalera;
+    public  int getPatesEscalera() {
+        return this.patesEscalera;
     }
 
-    public static void setPatesEscalera(int patesEscalera) {
-        BeanInformesDB.patesEscalera = patesEscalera;
+    public  void setPatesEscalera(int patesEscalera) {
+        this.patesEscalera = patesEscalera;
     }
 
-    public static int getDistanciaRegElementos() {
-        return distanciaRegElementos;
+    public  int getDistanciaRegElementos() {
+        return this.distanciaRegElementos;
     }
 
-    public static void setDistanciaRegElementos(int distanciaRegElementos) {
-        BeanInformesDB.distanciaRegElementos = distanciaRegElementos;
+    public  void setDistanciaRegElementos(int distanciaRegElementos) {
+        this.distanciaRegElementos = distanciaRegElementos;
     }
 
-    public static int getVentosas() {
-        return ventosas;
+    public int getVentosas() {
+        return this.ventosas;
     }
 
-    public static void setVentosas(int ventosas) {
-        BeanInformesDB.ventosas = ventosas;
+    public void setVentosas(int ventosas) {
+        this.ventosas = ventosas;
     }
 
-    public static int getValvulas() {
-        return valvulas;
+    public int getValvulas() {
+        return this.valvulas;
     }
 
-    public static void setValvulas(int valvulas) {
-        BeanInformesDB.valvulas = valvulas;
+    public  void setValvulas(int valvulas) {
+        this.valvulas = valvulas;
     }
 
-    public static int getJuntasUnion() {
+    public  int getJuntasUnion() {
         return juntasUnion;
     }
 
-    public static void setJuntasUnion(int juntasUnion) {
-        BeanInformesDB.juntasUnion = juntasUnion;
+    public  void setJuntasUnion(int juntasUnion) {
+        this.juntasUnion = juntasUnion;
     }
 
-    public static int getManometros() {
+    public  int getManometros() {
         return manometros;
     }
 
-    public static void setManometros(int manometros) {
-        BeanInformesDB.manometros = manometros;
+    public  void setManometros(int manometros) {
+        this.manometros = manometros;
     }
 
-    public static int getContadores() {
-        return contadores;
+    public  int getContadores() {
+        return this.contadores;
     }
 
-    public static void setContadores(int contadores) {
-        BeanInformesDB.contadores = contadores;
+    public  void setContadores(int contadores) {
+        this.contadores = contadores;
     }
-
-    public static void gnrlSetEi(int value, int offset)
+    public void gnrlSetEi(int value, int offset)
     {
         switch (offset)
         {
@@ -250,10 +255,8 @@ public class BeanInformesDB implements Parcelable
 
     }
 
-    public static void gnrlSetExt(int value, int offset)
-    {
-        switch (offset)
-        {
+    public void gnrlSetExt(int value, int offset) {
+        switch (offset) {
             case 1:
                 setAccesoUbicacion(value);
                 break;
@@ -288,49 +291,45 @@ public class BeanInformesDB implements Parcelable
         }
 
     }
-    //////////////////////////////////////////////////
-    // Parceable implementation
-    /////////////////////////////////////////////////
     @Override
     public int describeContents() {
         return 0;
     }
 
     @Override
-    public void writeToParcel(Parcel parcel, int i)
-    {
+    public void writeToParcel(Parcel parcel, int i) {
         parcel.writeInt(idDataBase);
+        parcel.writeString(fecha);
+        parcel.writeString(direccion_arqueta);
         parcel.writeInt(accesoUbicacion);
         parcel.writeInt(perimetroArqueta);
         parcel.writeInt(puertaAcceso);
         parcel.writeInt(cubierta);
         parcel.writeInt(parVertInt);
+        parcel.writeInt(parVertExt);
         parcel.writeInt(ventilacionLateral);
         parcel.writeInt(ventilacionSuperior);
         parcel.writeInt(patesEscalera);
         parcel.writeInt(distanciaRegElementos);
-        parcel.writeString(fecha);
-        parcel.writeString(direccion_arqueta);
         parcel.writeInt(ventosas);
         parcel.writeInt(valvulas);
         parcel.writeInt(juntasUnion);
         parcel.writeInt(manometros);
         parcel.writeInt(contadores);
-        parcel.writeString(comentario);
         parcel.writeByteArray(foto);
+        parcel.writeString(comentario);
+
     }
 
-    public static final Parcelable.Creator<BeanInformesDB> CREATOR = new Parcelable.Creator<BeanInformesDB>() {
-
+    public static final Creator<BeanInformesDB> CREATOR = new Creator<BeanInformesDB>() {
         @Override
-        public BeanInformesDB createFromParcel(Parcel source) {
-            return new BeanInformesDB(source);
+        public BeanInformesDB createFromParcel(Parcel parcel) {
+            return new BeanInformesDB(parcel);
         }
 
         @Override
         public BeanInformesDB[] newArray(int size) {
             return new BeanInformesDB[size];
         }
-
     };
 }
